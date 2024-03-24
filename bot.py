@@ -1,5 +1,4 @@
 # Word-filter99
-pip install pyTelegramBotAPI
 import telebot
 
 # Replace 'YOUR_ACTUAL_TOKEN' with your Telegram bot token
