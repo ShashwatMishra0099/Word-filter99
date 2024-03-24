@@ -1,3 +1,4 @@
+
 # Word-filter99
 import telebot
 
@@ -14,11 +15,17 @@ filtered_words = ["bad", "inappropriate", "spam", "fuck u"]
 def filter_message(message):
     for word in filtered_words:
         if word in message.text.lower():
+            try:
+                # Reply to the message if it exists
+                bot.reply_to(message, "Your message contains a filtered word and has been deleted.")
+            except telebot.apihelper.ApiTelegramException as e:
+                # Log the exception or handle it gracefully
+                print("Error while replying to message:", e)
+                
             # Delete the message that contains filtered words
             bot.delete_message(message.chat.id, message.message_id)
-            # Inform the user about the filtered word
-            bot.reply_to(message, "Your message contains a filtered word and has been deleted.")
             break
+
 
 # Start the bot
 bot.polling()
