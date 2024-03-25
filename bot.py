@@ -17,7 +17,7 @@ def filter_message(message):
         if word in message.text.lower():
             try:
                 # Reply to the message if it exists
-                bot.reply_to(message,"BACKCHODI MAAT KR LAUDE AESE MESSAGE NA KR GROUP MEIN BSDK")
+                bot.reply_to(message,"(YOUR MESSAGE WAS DELETED) BECAUSE YOUR MESSAGE CONTAINS UNWANTED WORDS THAT WERE NOT ALLOWED ON THE GROUP")
             except telebot.apihelper.ApiTelegramException as e:
                 # Log the exception or handle it gracefully
                 print("Error while replying to message:", e)
