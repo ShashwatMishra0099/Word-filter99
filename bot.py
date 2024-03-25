@@ -9,7 +9,7 @@ TOKEN = '7110027433:AAGsM3zFlvER09jVq2ACTKYCfghoqAMZs_s'
 bot = telebot.TeleBot(TOKEN)
 
 # List of filtered words
-filtered_words = ["bad", "inappropriate", "spam", "fuck u", "bbet", "bet"]
+filtered_words = ["bad", "inappropriate", "spam", "fuck u", "bbet", "bet", " /status@GetMarriedBot"]
 
 @bot.message_handler(func=lambda message: True)
 def filter_message(message):
